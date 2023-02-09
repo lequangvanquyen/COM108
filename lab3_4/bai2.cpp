@@ -1,10 +1,11 @@
 #include <stdio.h>
 int main(int argc, char const *argv[])
 {
-
+    //khai bao
     float toan, li, hoa, tb;
     char name[100];
 
+    //nhap tu ban phim
     printf("Nhap ten cua ban: ");
     scanf("%s", &name);
     printf("Nhap toan: ");
@@ -14,6 +15,7 @@ int main(int argc, char const *argv[])
     printf("Nhap hoa: ");
     scanf("%f", &hoa);
 
+    //tinh toan va xuat ket qua
     tb = (toan + li + hoa) / 3;
     if (tb >= 9)
     {
