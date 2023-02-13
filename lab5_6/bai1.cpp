@@ -22,30 +22,45 @@ int main(int argc, char const *argv[])
     scanf("%s", &name);
     printf("Nhap toan: ");
     scanf("%f", &toan);
-    printf("Nhap li: ");
-    scanf("%f", &li);
-    printf("Nhap hoa: ");
-    scanf("%f", &hoa);
+    if (toan < 0 || toan > 10)
+    {
+        printf("Nhap sai !... Nhap lai");
+        return 0;
+    }
+    else
+    {
+        printf("Nhap li: ");
+        scanf("%f", &li);
+        if (li < 0 || li > 10)
+        {
+            printf("Nhap sai !... Nhap lai");
+            return 0;
+        }
+        else
+        {
+            printf("Nhap hoa: ");
+            scanf("%f", &hoa);
+            if (hoa < 0 || hoa > 10)
+            {
+                printf("Nhap sai !... Nhap lai");
+                return 0;
+            }
+        }
+    }
 
     tb = (int)(toan + li + hoa) / 3;
     printf("diem trung binh cua ban la: %d\n", tb);
     switch (tb)
     {
     case 10:
-        printf("Ban xep loai A");
-        break;
     case 9:
         printf("Ban xep loai A");
         break;
     case 8:
-        printf("Ban xep loai B");
-        break;
     case 7:
         printf("Ban xep loai B");
         break;
     case 6:
-        printf("Ban xep loai C");
-        break;
     case 5:
         printf("Ban xep loai C");
         break;
